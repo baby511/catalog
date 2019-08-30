@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index Page</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
+</head>
+
+<body>
+<form action="" method="post"></form>
+	<div class="container">
+		<h1>welcome to index page</h1>
+		<nav class="navbar navbar_inverse">
+		<div class="container-fluid">
+			<div class="navar-header">
+			<a class="navbar-brand" href="#">websitename</a>
+				
+			</div>
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#">Home</a></li>
+				<li ><a href="{{url_for('showData')}}">data</a></li>
+				<li ><a href="{{url_for('register')}}">Register</a></li>
+				{% if current_user.is_authenticated %}
+				<li ><a href="{{url_for('account')}}">Account</a></li>
+
+				<li ><a href="{{url_for('logout')}}">Logout</a></li>
+				{% else %}
+
+				<li ><a href="{{url_for('login')}}">Login</a></li>
+				{% endif %}
+
+				
+			</ul>
+			<div align="right" style="color: white;padding-top: 20px;border-top-width: 20px; ">
+				AccountName	: {{current_user.name}}
+			</div>
+
+		</nav>
+	</div>
+</form>
+
+</body>
+</html>

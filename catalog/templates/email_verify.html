@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>email verify</title>
+</head>
+<body>
+<form action="{{url_for('email_validate')}}" method="POST">
+	<h1>otp has been sent to your email so please check it once</h1>
+	Enter OTP:<input type="text" name="otp">
+	<input type="submit" value="OTP submit">
+</form>
+</body>
+</html>	

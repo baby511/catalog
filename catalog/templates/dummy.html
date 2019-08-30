@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dummy data</title>
+</head>
+<body>
+
+
+
+
+<table border="5">
+	
+
+		<tr>
+	<th>name</th>
+	<th>dob</th>
+	<th>org</th>
+	</tr>
+	<tr>
+		{%for d in data%}
+	<td>{{d.name}}</td>
+	<td>{{d.dob}}</td>
+	<td>{{d.org}}</td>
+
+	</tr>
+		{% endfor %}
+	
+
+</table>
+</body>
+</html>
